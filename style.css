@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-height: 200vh;
+}
+
+.box{
+    border: 6px,solid,white;
+    transition: 0.25s ease;
+    background: black;
+    padding: 5px;
+}
+
+p {
+    visibility: hidden;
+    width: 240px;
+    margin: 10px auto 0;
+    opacity: 0;
+    transition: 0.6s;
+    transform: translateX(-400px);
+
+}
+
+.Question-Click {
+    background: rgb(25, 182, 49);
+    border: 6px,dashed,teal;
+    border-radius: 20px;
+}
+
+.Show-Response {
+
+    visibility: visible;
+    opacity: 1;  
+    transform: translateX(0);
+
+
+}
+
+.mousemove {
+    height: 50px;
+    width: 50px;
+    border: 2px , solid,pink;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    
+    border-radius: 50%;
+
+ }
+
+ nav{
+background: rgb(25, 122, 41);
+position: fixed;
+width: 100%;
+height: 50px;
+top: 0px;
+transition: 0.4s;
+ }
+
+nav::after{
+    content: "";
+    height: 150px;
+    width: 150px;
+    background: radial-gradient(circle closest-side,
+    rgba(255,255,255,0.94),
+    transparent);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    transition: 0.25s;
+    z-index: 20;
+    opacity: 0;
+    left: var(--x);
+    top: var(--y);
+}
+nav:hover::after{
+    opacity: 1;
+}
+
+ ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+ }
+
+ 
